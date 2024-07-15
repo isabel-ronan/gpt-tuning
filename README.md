@@ -1,17 +1,18 @@
 # GPT Tuning
+
 - This repository houses the code to fine-tune a GPT-3.5 Turbo model on clinical dialogue. 
 - The fine-tuned GPT model is trained using the `aci-bench` dataset which is available in Microsoft's [clinical_visit_note_summarization_corpus](https://github.com/microsoft/clinical_visit_note_summarization_corpus) along with the [OpenAI API](https://openai.com/index/openai-api/).
 - Fine-tuned results will be compared to standard model outputs and human outputs; these results will be reported for various fine-tuned models.
 
 ## Methodology
-✅ 1. Format the `aci-bench` dataset for OpenAI fine-tuning. 
-✅ 2. Validate data using [OpenAI's validation script](https://cookbook.openai.com/examples/chat_finetuning_data_prep)
-✅ 3. Train a "default" model using the `gpt-3.5-turbo-012` model (as recommended by OpenAI in their [docs](https://platform.openai.com/docs/guides/fine-tuning#:~:text=gpt%2D3.5%2Dturbo%2D0125%20(recommended))). 
-✅ 4. Train using different batch sizes, learning rates, and epochs.
-🔄 1. Assess quality of models.
+1. Format the `aci-bench` dataset for OpenAI fine-tuning. ✅
+2. Validate data using [OpenAI's validation script](https://cookbook.openai.com/examples/chat_finetuning_data_prep). ✅
+3. Train a "default" model using the `gpt-3.5-turbo-012` model (as recommended by OpenAI in their [docs](https://platform.openai.com/docs/guides/fine-tuning#:~:text=gpt%2D3.5%2Dturbo%2D0125%20(recommended))). ✅
+4. Train using different batch sizes, learning rates, and epochs. ✅
+5. Assess quality of models. 🔄
 
 
-# Different Hyperparameters Tested - Grid Search Strategy
+## Different Hyperparameters Tested - Grid Search Strategy
 | Model Suffix    | Trained Tokens |Learning Rate Multiplier| Epochs    | Batch Size | Training Loss | Validation Loss | Model Name |
 | ------- | ------- | ------- | ------- | ------- | ------- | ------- | ------- |
 | default-aci-bench | 472,395 | 2 | 3 | 1 | 0.6734 | 0.8788 | ft:gpt-3.5-turbo-0125:personal:default-aci-bench:9lDAbkNy |
