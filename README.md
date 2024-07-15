@@ -1,4 +1,5 @@
-# GPT Tuning
+
+# GPT Tuning
 
 - This repository houses the code to fine-tune a GPT-3.5 Turbo model on clinical dialogue. 
 - The fine-tuned GPT model is trained using the `aci-bench` dataset which is available in Microsoft's [clinical_visit_note_summarization_corpus](https://github.com/microsoft/clinical_visit_note_summarization_corpus) along with the [OpenAI API](https://openai.com/index/openai-api/).
