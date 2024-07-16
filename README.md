@@ -2,7 +2,7 @@
 
 - This repository houses the code to fine-tune a GPT-3.5 Turbo model on clinical dialogue. 
 - The fine-tuned GPT model is trained using the `aci-bench` dataset which is available in Microsoft's [clinical_visit_note_summarization_corpus](https://github.com/microsoft/clinical_visit_note_summarization_corpus) along with the [OpenAI API](https://openai.com/index/openai-api/).
-- Fine-tuned results will be compared to standard model outputs and human outputs; these results will be reported for various fine-tuned models.
+- Fine-tuned outputs will be compared to human outputs; these results will be reported for various fine-tuned models.
 
 ## Methodology
 1. Format the `aci-bench` dataset for OpenAI fine-tuning. ✅
@@ -38,3 +38,28 @@
 - Learning Rates Tested = 0.5, 1, 2
 - Epochs Tested = 3, 10
 - Batch Sizes Tested = 1, 32, 67 (batch gradient descent)
+
+## Quality Assessment
+| id                 | rouge1   | rouge2   | rougeL   | rougeLsum | bertScore | average   |
+|--------------------|----------|----------|----------|-----------|-----------|-----------|
+| no-fine-tuning| 0.47426083   | 0.176298955   | 0.249168809   | 0.456341087 | 0.632515335 | 0.397717003 |
+| default-aci-bench| 0.547838677 | 0.233264252   | 0.28864903   | 0.532429578 | 0.683181063 | 0.45707252   |
+| id0 | 0.461465998   | 0.161439656   | 0.222589831 | 0.447362259 | 0.645534579 | 0.387678465 |
+| id1 | 0.488685346 | 0.1894922 | 0.254346586 | 0.473521086 | 0.646550941 | 0.410519232 |
+| id2 | 0.483401849 | 0.185078423 | 0.25226153 | 0.465779684 | 0.64290905 | 0.405886107 |
+| id3 | 0.543767716 | 0.229418259 | 0.288665606 | 0.528047338 | 0.683086141 | 0.454597012 |
+| id4 | 0.457772558 | 0.151501786 | 0.214275959 | 0.443538071 | 0.637459373 | 0.38090955 |
+| id5 | 0.425489118 | 0.131339777 | 0.194310695 | 0.411636878 | 0.627833875 | 0.358122069 |
+| id6 | 0.518722606 | 0.201024527 | 0.263795354 | 0.50359768 | 0.673006248 | 0.432029283 |
+| id7 | 0.431250634 | 0.139421432 | 0.202982031 | 0.416744121 | 0.629479472 | 0.363975538 |
+| id8 | 0.484294375 | 0.183704202 | 0.250879846 | 0.468147533 | 0.64547507 | 0.406500205 |
+| id9 | 0.579604761 | 0.274227518 | 0.331028468 | 0.56517976 | 0.701949692 | 0.49039804 |
+| id10 | 0.504062534 | 0.183951389 | 0.241417895 | 0.489547927 | 0.659888776 | 0.415773704 |
+| id11 | 0.461714149 | 0.156300151 | 0.219464038 | 0.446361916 | 0.642121379 | 0.385192327 |
+| id12 | 0.552500706 | 0.236540997 | 0.296557143 | 0.538424824 | 0.68781325 | 0.462367384 |
+| id13 | 0.401570797 | 0.121551783 | 0.180547696 | 0.388084168 | 0.617024422 | 0.341755773 |
+| id14 | 0.429907316 | 0.139586073 | 0.203203591 | 0.414540341 | 0.63207709 | 0.363862882 |
+| id15 | 0.601780641 | 0.299587614 | 0.354806801 | 0.587760463 | 0.715226936 | 0.511832491 |
+| id16 | 0.548802961 | 0.22514115 | 0.284379352 | 0.532321942 | 0.682127571 | 0.454554595 |
+| id17 | 0.500528754 | 0.182462544 | 0.23783652 | 0.484936127 | 0.654691569 | 0.412091103 |
+
