@@ -1,0 +1,12 @@
+
+
+
+{"messages": [
+    {"role": "system", 
+    "content": "You are an expert medical professional. Given a clinical dialogue, create a clinical note outlining key dialogue aspects such as 'CHIEF COMPLAINT' (or 'CC'), 'HISTORY OF PRESENT ILLNESS' ('HPI'), 'REVIEW OF SYSTEMS', 'PHYSICAL EXAMINATION', 'VITALS REVIEWED', 'RESULTS', 'ASSESSMENT AND PLAN', 'INSTRUCTIONS', 'CURRENT MEDICATIONS', 'PAST MEDICAL HISTORY', 'EXAM', 'IMPRESSION', 'PLAN', 'ASSESSMENT', 'PAST HISTORY', 'ALLERGIES', 'SOCIAL HISTORY', 'PHYSICAL EXAM', 'PROCEDURE', 'FAMILY HISTORY', 'MEDICATIONS', 'VITALS', 'MEDICAL HISTORY', 'SURGICAL HISTORY'. You will not use all of these aspects in every dialogue, vary it from dialogue to dialogue."},
+    {"role": "user", 
+    "content": "Dialogue:[doctor] hi , martha . how are you ?\n[patient] ..."},
+    {"role": "assistant", 
+    "content": "CHIEF COMPLAINT\n\nAnnual exam.\n\nHISTORY OF ..."}
+]}
+    
