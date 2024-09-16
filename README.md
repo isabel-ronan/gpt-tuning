@@ -64,6 +64,6 @@
 | id17 | 0.500528754 | 0.182462544 | 0.23783652 | 0.484936127 | 0.654691569 | 0.412091103 |
 
 ## Additional Information
-- Python Version 
-- Pip Version
+- Python Version 3.12.4
+- Pip Version 24.0
 - All required packages are in `requirements.txt`.
