@@ -63,3 +63,7 @@
 | id16 | 0.548802961 | 0.22514115 | 0.284379352 | 0.532321942 | 0.682127571 | 0.454554595 |
 | id17 | 0.500528754 | 0.182462544 | 0.23783652 | 0.484936127 | 0.654691569 | 0.412091103 |
 
+## Additional Information
+- Python Version 
+- Pip Version
+- All required packages are in `requirements.txt`.
